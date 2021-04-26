@@ -1,9 +1,11 @@
 import './App.css';
+import MainMap from './MainMap/MainMap'
 
 function App() {
   return (
     <div className="center">
-      <h1>Hello map!</h1>
+      <div>oh hi hey hello</div>
+      <MainMap />
     </div>
 
   );
