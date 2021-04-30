@@ -36,7 +36,7 @@ const MainMap = () => {
 
   useEffect(() => {
     if (showMap) {
-      axios.get(`http://www.philart.net/api/geo.json?ll=${ll}&bb=${bb}`)
+      axios.get(`https://www.philart.net/api/geo.json?ll=${ll}&bb=${bb}`)
       .then(function (response) {
         console.log('response', response);
         setArt(response.data);
