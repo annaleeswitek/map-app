@@ -1,10 +1,14 @@
 import './App.css';
+import MainMap from './MainMap/MainMap'
+import { ChakraProvider } from "@chakra-ui/react"
 
-function App() {
+const App = () => {
   return (
-    <div className="center">
-      <h1>Hello map!</h1>
-    </div>
+    <ChakraProvider>
+      <div className="center">
+        <MainMap />
+      </div>
+    </ChakraProvider>
 
   );
 }
