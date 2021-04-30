@@ -12,8 +12,6 @@ Geocode.setRegion("es");
 Geocode.setLocationType("ROOFTOP");
 Geocode.setApiKey("AIzaSyCO9T7g7wMVfnDOPAfCPlbl34F7eGhGqoU");
 
-// const fetcher = (...args) => fetch(...args).then(response => response.json());
-
 const MainMap = () => {
 
   const [value, setValue] = useState('')
@@ -23,9 +21,7 @@ const MainMap = () => {
   const [art, setArt] = useState({})
   const [showMap, setShowMap] = useState(false)
 
-  // const endpoint = `https://www.philart.net/api/geo.json?ll=${ll}&bb=${bb}`;
-  // const { data, error } = useSwr(endpoint, { fetcher });
-  // const art = data && !error ? data : [];
+
 
   const handleChange = e => {
     setShowMap(false);
