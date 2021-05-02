@@ -14,7 +14,7 @@ npx generate-react-cli component MyComponent
 
 ### Attribution
 
-The dataset I am using if from Open Data Philly https://www.opendataphilly.org/dataset/philadelphia-public-art-philart-net
+Dataset: https://www.opendataphilly.org/dataset/philadelphia-public-art-philart-net
 
-I used a tutorial on YouTube to get started with react-leaflet https://www.youtube.com/watch?v=290VgjkLong
+Tutorial: https://www.youtube.com/watch?v=290VgjkLong
 

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import './MainMap.css';
-import useSwr from 'swr';
 import axios from 'axios';
 import { Input, Button, Flex, Heading, Box, Image } from "@chakra-ui/react"
 import Geocode from "react-geocode";
@@ -21,19 +20,6 @@ const MainMap = () => {
   const [art, setArt] = useState({})
   const [showMap, setShowMap] = useState(false)
 
-
-
-  const handleChange = e => {
-    setShowMap(false);
-    setCenter('');
-    setLL('');
-    setBB('');
-    setArt({})
-    console.log(e.target.value)
-    setValue(e.target.value)
-    console.log(value)
-  }
-
   useEffect(() => {
     if (showMap) {
       axios.get(`https://www.philart.net/api/geo.json?ll=${ll}&bb=${bb}`)
@@ -49,14 +35,20 @@ const MainMap = () => {
 
   }, [showMap, ll, bb])
 
+  const handleChange = e => {
+    setShowMap(false);
+    setCenter('');
+    setLL('');
+    setBB('');
+    setArt({})
+    console.log(e.target.value)
+    setValue(e.target.value)
+    console.log(value)
+  }
+
   const handleSubmit = e => {
 
-    // Clear any previous map
     setShowMap(false);
-
-    // Get Latitude and Longitude from Address using Geocode
-    // latitudes cannot be more than 9 characters long (inclusive of the decimal point), must be numbers, and cannot be < 39 or > 41
-    // longitudes cannot be more than 10 characters long (inclusive of a minus sign and decimal point), must be numbers, and cannot be < -76 or > -74
 
     Geocode.fromAddress(e.target.value).then(
       (response) => {
@@ -92,9 +84,7 @@ const MainMap = () => {
 
       },
       (error) => {
-        console.log('****error from geocode****')
         console.error(error);
-        console.log('********')
       }
     );
   }
