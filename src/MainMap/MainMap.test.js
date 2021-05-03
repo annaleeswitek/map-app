@@ -6,9 +6,7 @@ import MainMap from './MainMap';
 describe('<MainMap />', () => {
   test('it should mount', () => {
     render(<MainMap />);
-    
     const mainMap = screen.getByTestId('MainMap');
-
     expect(mainMap).toBeInTheDocument();
   });
 });

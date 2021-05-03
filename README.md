@@ -16,5 +16,3 @@ npx generate-react-cli component MyComponent
 
 Dataset: https://www.opendataphilly.org/dataset/philadelphia-public-art-philart-net
 
-Tutorial: https://www.youtube.com/watch?v=290VgjkLong
-
