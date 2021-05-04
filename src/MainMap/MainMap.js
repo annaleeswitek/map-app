@@ -126,7 +126,7 @@ const MainMap = () => {
               return(
                 <Marker key={idx} position={[singleArt.location.latitude, singleArt.location.longitude]}>
                   <Popup>
-                    <div>{singleArt?.title?.display}</div>
+                    <Heading as="h2" size="md">{singleArt?.title?.display}</Heading>
                     <Box>
                       <Image src={singleArt.pictures[0].large.url} alt={singleArt?.title?.display} />
                     </Box>
