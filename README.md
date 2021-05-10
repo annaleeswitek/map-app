@@ -1,5 +1,11 @@
 # 🗺 Map App 🗺
 
+### To Demo
+
+Current MVP version doesn't have form validation, so some addresses I've validated are working are: 
+
+- 3500 Market Street Philadelphia PA
+
 ### npm start
 
 Runs the app in the development mode.
